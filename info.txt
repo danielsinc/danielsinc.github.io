@@ -1,0 +1,27 @@
+index.html
+├── blog.html
+├── contact.html (si la haces separada)
+├── portfolio.html (si la haces separada)
+├── js/
+│   └── script.js
+├── scss/
+│   ├── partials/
+│   │   ├── _variables.scss   # Colores, fuentes, etc.
+│   │   ├── _base.scss        # Estilos base (reset, body, container)
+│   │   ├── _header.scss      # Estilos del header y nav
+│   │   ├── _footer.scss      # Estilos del footer
+│   │   ├── _buttons.scss     # Estilos de botones
+│   │   ├── _hero.scss        # Estilos sección Hero
+│   │   ├── _services.scss    # Estilos sección Servicios
+│   │   ├── _plans.scss       # Estilos nuevas secciones de Planes
+│   │   ├── _portfolio.scss   # Estilos sección Portafolio
+│   │   ├── _contact.scss     # Estilos sección Contacto
+│   │   ├── _blog.scss        # Estilos para la página de Blog
+│   │   ├── _animations.scss  # Estilos de animación de scroll
+│   │   └── _responsive.scss  # Media Queries
+│   └── style.scss          # Archivo principal que importa los parciales
+└── css/
+    └── style.css           # Archivo CSS compilado (NO EDITAR DIRECTAMENTE)
+    └── style.css.map       # Mapa para depuración (generado automáticamente)
+└── img/                    # Carpeta para tus imágenes
+    └── logo.png (ejemplo)
