@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Nombre - Diseñador Gráfico y Web</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     </head>
 <body>
@@ -13,31 +15,30 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">Tu Nombre</a>
-            </div>
-
-            <nav>
+                </div>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html#hero">Inicio</a></li>
+                    <li><a href="index.html#hero" class="active">Inicio</a></li>
                     <li><a href="index.html#services">Servicios</a></li>
-                    <li><a href="index.html#plans">Planes</a></li> <li><a href="index.html#portfolio">Portafolio</a></li>
-                    <li><a href="blog.html">Blog</a></li> <li><a href="#contact">Contacto</a></li>
+                    <li><a href="index.html#plans">Planes</a></li>
+                    <li><a href="portfolio.html">Portafolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </nav>
-
-             <button class="hamburger-btn" aria-label="Toggle Navigation">
+             <button class="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-
-             <div class="mobile-nav">
+            <div class="mobile-nav">
                  <ul>
                     <li><a href="index.html#hero">Inicio</a></li>
                     <li><a href="index.html#services">Servicios</a></li>
                     <li><a href="index.html#plans">Planes</a></li>
-                    <li><a href="index.html#portfolio">Portafolio</a></li>
+                    <li><a href="portfolio.html">Portafolio</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -45,218 +46,153 @@
 
     <main>
         <section id="hero" class="hero-section">
-           <div class="container">
+            <div class="hero-background-image" style="background-image: url('https://picsum.photos/seed/hero/1920/1080?grayscale&blur=2');"></div>
+            <div class="container">
                 <div class="hero-content animate-on-scroll fade-in-up">
                     <h1>Diseño Gráfico Creativo y Desarrollo Web Moderno</h1>
                     <p>Transformando ideas en experiencias visuales impactantes y funcionales.</p>
-                    <a href="#contact" class="btn btn-primary">Hablemos de tu proyecto</a>
+                    <a href="contact.html" class="btn btn-primary">Hablemos de tu proyecto</a>
                 </div>
             </div>
-             <div class="hero-background-image" style="background-image: url('https://picsum.photos/1920/1080?grayscale&blur=2');"></div>
         </section>
 
         <section id="services" class="services-section">
-             <div class="container">
+              <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in">Mis Servicios</h2>
                 <div class="services-grid">
-                    <div class="service-item animate-on-scroll fade-in-up" style="--delay: 0.1s;"> ... </div>
-                    <div class="service-item animate-on-scroll fade-in-up" style="--delay: 0.2s;"> ... </div>
-                    <div class="service-item animate-on-scroll fade-in-up" style="--delay: 0.3s;"> ... </div>
+                    <div class="service-item animate-on-scroll fade-in-up">
+                        <img src="https://picsum.photos/seed/graphics/100/100" alt="Icono Diseño Gráfico" class="service-icon">
+                        <h3>Diseño Gráfico</h3>
+                        <p>Identidad visual, branding, material publicitario, ilustraciones y más.</p>
+                    </div>
+                    <div class="service-item animate-on-scroll fade-in-up" style="--delay: 0.1s;">
+                        <img src="https://picsum.photos/seed/shopify/100/100" alt="Icono Shopify" class="service-icon">
+                        <h3>Tiendas Online (Shopify)</h3>
+                        <p>Creación y personalización de tiendas online atractivas y funcionales.</p>
+                    </div>
+                    <div class="service-item animate-on-scroll fade-in-up" style="--delay: 0.2s;">
+                         <img src="https://picsum.photos/seed/wordpress/100/100" alt="Icono WordPress" class="service-icon">
+                        <h3>Páginas Web (WordPress)</h3>
+                        <p>Desarrollo de sitios web administrables, responsivos y optimizados.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div id="plans"> <section id="video-plans" class="plans-section">
+        <div id="plans">
+             <section id="video-plans" class="plans-section">
                 <div class="container">
                     <h2 class="section-title animate-on-scroll fade-in">Planes de Edición de Video</h2>
                     <div class="plans-grid">
                         <div class="plan-card animate-on-scroll fade-in-up">
                             <h3 class="plan-title">Básico Reel</h3>
                             <p class="plan-description">Ideal para contenido rápido en redes sociales.</p>
-                            <ul class="plan-features">
-                                <li>Hasta 1 min de video</li>
-                                <li>Edición básica (cortes, transiciones)</li>
-                                <li>Música de stock libre</li>
-                                <li>1 Revisión</li>
-                            </ul>
-                            <div class="plan-price">$XX</div>
-                            <a href="#contact" class="btn btn-secondary">Consultar</a>
+                            <ul class="plan-features"><li>Hasta 1 min</li><li>Edición básica</li><li>Música stock</li><li>1 Revisión</li></ul>
+                            <div class="plan-price">$XX</div><a href="contact.html?plan=video-basico" class="btn btn-secondary">Consultar</a>
                         </div>
                         <div class="plan-card featured animate-on-scroll fade-in-up" style="--delay: 0.1s;">
-                            <h3 class="plan-title">Pro Content</h3>
-                            <p class="plan-description">Perfecto para YouTube, Vlogs o videos corporativos.</p>
-                            <ul class="plan-features">
-                                <li>Hasta 5 min de video</li>
-                                <li>Edición avanzada (color, audio)</li>
-                                <li>Música de stock premium</li>
-                                <li>Gráficos básicos (lower thirds)</li>
-                                <li>2 Revisiones</li>
-                            </ul>
-                            <div class="plan-price">$XXX</div>
-                            <a href="#contact" class="btn btn-primary">Seleccionar Plan</a>
+                            <h3 class="plan-title">Pro Content</h3><p class="plan-description">Perfecto para YouTube, Vlogs o corporativos.</p>
+                            <ul class="plan-features"><li>Hasta 5 min</li><li>Edición avanzada</li><li>Música premium</li><li>Gráficos básicos</li><li>2 Revisiones</li></ul>
+                            <div class="plan-price">$XXX</div><a href="contact.html?plan=video-pro" class="btn btn-primary">Seleccionar Plan</a>
                         </div>
                         <div class="plan-card animate-on-scroll fade-in-up" style="--delay: 0.2s;">
-                            <h3 class="plan-title">Cinematic</h3>
-                            <p class="plan-description">Para proyectos que requieren un toque cinematográfico.</p>
-                             <ul class="plan-features">
-                                <li>Hasta 10 min de video</li>
-                                <li>Edición cinematográfica (color grading pro)</li>
-                                <li>Diseño de sonido</li>
-                                <li>Animaciones y efectos</li>
-                                <li>3 Revisiones</li>
-                            </ul>
-                            <div class="plan-price">$XXXX</div>
-                            <a href="#contact" class="btn btn-secondary">Consultar</a>
+                            <h3 class="plan-title">Cinematic</h3><p class="plan-description">Para proyectos con un toque cinematográfico.</p>
+                            <ul class="plan-features"><li>Hasta 10 min</li><li>Color grading pro</li><li>Diseño de sonido</li><li>Animaciones</li><li>3 Revisiones</li></ul>
+                            <div class="plan-price">$XXXX</div><a href="contact.html?plan=video-cinematic" class="btn btn-secondary">Consultar</a>
                         </div>
                          <div class="plan-card animate-on-scroll fade-in-up" style="--delay: 0.3s;">
-                            <h3 class="plan-title">A Medida</h3>
-                            <p class="plan-description">¿Necesitas algo específico? ¡Hablemos!</p>
-                             <ul class="plan-features">
-                                <li>Duración flexible</li>
-                                <li>Requerimientos especiales</li>
-                                <li>Producción completa opcional</li>
-                                <li>Soporte prioritario</li>
-                            </ul>
-                            <div class="plan-price">Personalizado</div>
-                            <a href="#contact" class="btn btn-secondary">Solicitar Cotización</a>
+                            <h3 class="plan-title">A Medida</h3><p class="plan-description">¿Necesitas algo específico? ¡Hablemos!</p>
+                            <ul class="plan-features"><li>Duración flexible</li><li>Requerimientos especiales</li><li>Producción opcional</li><li>Soporte prioritario</li></ul>
+                            <div class="plan-price">Personalizado</div><a href="contact.html?plan=video-custom" class="btn btn-secondary">Solicitar Cotización</a>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <section id="branding-plans" class="plans-section">
+            <section id="branding-plans" class="plans-section alternate-bg">
                 <div class="container">
                      <h2 class="section-title animate-on-scroll fade-in">Diseño de Marca e Identidad</h2>
                      <div class="plans-grid">
-                         <div class="plan-card animate-on-scroll fade-in-up">
-                            <h3 class="plan-title">Logo Express</h3>
-                            <p class="plan-description">Un logo profesional para empezar.</p>
-                            <ul class="plan-features">
-                                <li>2 Conceptos iniciales</li>
-                                <li>Diseño de logo final</li>
-                                <li>Archivos vectoriales (AI, SVG)</li>
-                                <li>Formatos web/impresión (PNG, JPG)</li>
-                                <li>1 Ronda de revisión</li>
-                             </ul>
-                            <div class="plan-price">$XX</div>
-                            <a href="#contact" class="btn btn-secondary">Empezar</a>
+                        <div class="plan-card animate-on-scroll fade-in-up">
+                            <h3 class="plan-title">Logo Express</h3><p class="plan-description">Un logo profesional para empezar.</p>
+                            <ul class="plan-features"><li>2 Conceptos</li><li>Logo final</li><li>Vectoriales</li><li>Web/Impresión</li><li>1 Revisión</li></ul>
+                            <div class="plan-price">$XX</div><a href="contact.html?plan=logo-express" class="btn btn-secondary">Empezar</a>
                         </div>
-                         <div class="plan-card featured animate-on-scroll fade-in-up" style="--delay: 0.1s;">
-                            <h3 class="plan-title">Identidad Visual</h3>
-                            <p class="plan-description">Define la esencia visual de tu marca.</p>
-                            <ul class="plan-features">
-                                <li>3-4 Conceptos de logo</li>
-                                <li>Diseño de logo final + Variaciones</li>
-                                <li>Paleta de colores definida</li>
-                                <li>Selección tipográfica</li>
-                                <li>Guía de estilo básica</li>
-                                <li>2 Rondas de revisión</li>
-                             </ul>
-                            <div class="plan-price">$XXX</div>
-                            <a href="#contact" class="btn btn-primary">Crear mi Identidad</a>
+                        <div class="plan-card featured animate-on-scroll fade-in-up" style="--delay: 0.1s;">
+                            <h3 class="plan-title">Identidad Visual</h3><p class="plan-description">Define la esencia visual de tu marca.</p>
+                            <ul class="plan-features"><li>3-4 Conceptos</li><li>Logo + Variaciones</li><li>Paleta colores</li><li>Tipografía</li><li>Guía básica</li><li>2 Revisiones</li></ul>
+                            <div class="plan-price">$XXX</div><a href="contact.html?plan=identidad-visual" class="btn btn-primary">Crear mi Identidad</a>
                         </div>
-                         <div class="plan-card animate-on-scroll fade-in-up" style="--delay: 0.2s;">
-                            <h3 class="plan-title">Branding Completo</h3>
-                            <p class="plan-description">Una experiencia de marca cohesiva y total.</p>
-                            <ul class="plan-features">
-                                <li>Todo lo de Identidad Visual</li>
-                                <li>Diseño papelería (tarjeta, hoja membretada)</li>
-                                <li>Plantillas para redes sociales</li>
-                                <li>Manual de marca detallado</li>
-                                <li>Consultoría estratégica</li>
-                                <li>Soporte extendido</li>
-                             </ul>
-                            <div class="plan-price">$XXXX</div>
-                            <a href="#contact" class="btn btn-secondary">Potenciar mi Marca</a>
+                        <div class="plan-card animate-on-scroll fade-in-up" style="--delay: 0.2s;">
+                            <h3 class="plan-title">Branding Completo</h3><p class="plan-description">Una experiencia de marca cohesiva.</p>
+                            <ul class="plan-features"><li>Todo Identidad Visual</li><li>Papelería</li><li>Plantillas RRSS</li><li>Manual detallado</li><li>Consultoría</li><li>Soporte extendido</li></ul>
+                            <div class="plan-price">$XXXX</div><a href="contact.html?plan=branding-completo" class="btn btn-secondary">Potenciar mi Marca</a>
                         </div>
                      </div>
                 </div>
             </section>
-
              <section id="social-media-plans" class="plans-section">
                 <div class="container">
                      <h2 class="section-title animate-on-scroll fade-in">Gestión de Redes Sociales</h2>
                      <div class="plans-grid">
                         <div class="plan-card animate-on-scroll fade-in-up">
-                            <h3 class="plan-title">Kit Inicial</h3>
-                            <p class="plan-description">Diseño de perfiles y plantillas base.</p>
-                            <ul class="plan-features">
-                                <li>Optimización de 2 perfiles</li>
-                                <li>Diseño de foto de perfil/portada</li>
-                                <li>5 Plantillas editables (Canva/PSD)</li>
-                                <li>Guía de buenas prácticas</li>
-                            </ul>
-                            <div class="plan-price">$XX</div>
-                            <a href="#contact" class="btn btn-secondary">Ordenar Kit</a>
+                           <h3 class="plan-title">Kit Inicial</h3><p class="plan-description">Diseño de perfiles y plantillas base.</p>
+                            <ul class="plan-features"><li>Optimización 2 perfiles</li><li>Foto/Portada</li><li>5 Plantillas editables</li><li>Guía prácticas</li></ul>
+                            <div class="plan-price">$XX</div><a href="contact.html?plan=social-kit" class="btn btn-secondary">Ordenar Kit</a>
                         </div>
                         <div class="plan-card featured animate-on-scroll fade-in-up" style="--delay: 0.1s;">
-                            <h3 class="plan-title">Gestión Mensual</h3>
-                            <p class="plan-description">Contenido constante y crecimiento orgánico.</p>
-                            <ul class="plan-features">
-                                <li>Gestión de 2-3 plataformas</li>
-                                <li>Creación de 12 posts/mes</li>
-                                <li>Copywriting y diseño gráfico</li>
-                                <li>Programación de contenido</li>
-                                <li>Informe mensual básico</li>
-                            </ul>
-                            <div class="plan-price">$XXX <span>/mes</span></div>
-                            <a href="#contact" class="btn btn-primary">Impulsar mis Redes</a>
+                           <h3 class="plan-title">Gestión Mensual</h3><p class="plan-description">Contenido constante y crecimiento.</p>
+                            <ul class="plan-features"><li>Gestión 2-3 plat.</li><li>12 posts/mes</li><li>Copy y diseño</li><li>Programación</li><li>Informe básico</li></ul>
+                            <div class="plan-price">$XXX <span>/mes</span></div><a href="contact.html?plan=social-gestion" class="btn btn-primary">Impulsar mis Redes</a>
                         </div>
                         <div class="plan-card animate-on-scroll fade-in-up" style="--delay: 0.2s;">
-                            <h3 class="plan-title">Estrategia y Campañas</h3>
-                            <p class="plan-description">Resultados medibles con publicidad y estrategia.</p>
-                            <ul class="plan-features">
-                                <li>Todo lo de Gestión Mensual</li>
-                                <li>Estrategia de contenido avanzada</li>
-                                <li>Gestión de campañas (Ads) *</li>
-                                <li>Monitorización y respuesta</li>
-                                <li>Informe detallado con KPIs</li>
-                            </ul>
-                             <div class="plan-price">$XXXX <span>/mes</span></div>
-                             <a href="#contact" class="btn btn-secondary">Dominar Social Media</a>
-                             <small style="font-size: 0.75rem; color: #888; display:block; margin-top: 10px;">* Presupuesto publicitario no incluido.</small>
+                            <h3 class="plan-title">Estrategia & Ads</h3><p class="plan-description">Resultados medibles con publicidad.</p>
+                            <ul class="plan-features"><li>Todo Gestión Mensual</li><li>Estrategia avanzada</li><li>Gestión Campañas Ads *</li><li>Monitorización</li><li>Informe detallado</li></ul>
+                             <div class="plan-price">$XXXX <span>/mes</span></div><a href="contact.html?plan=social-estrategia" class="btn btn-secondary">Dominar Social Media</a>
+                             <small class="plan-disclaimer">* Presupuesto publicitario no incluido.</small>
                         </div>
                     </div>
                 </div>
             </section>
+        </div>
 
-        </div> <section id="portfolio" class="portfolio-section">
-             </section>
+        <section id="portfolio" class="portfolio-section alternate-bg">
+             <div class="container">
+                 <h2 class="section-title animate-on-scroll fade-in">Algunos Proyectos</h2>
+                 <div class="portfolio-grid portfolio-preview"> <a href="portfolio.html" class="portfolio-item animate-on-scroll zoom-in">
+                         <img src="https://picsum.photos/seed/project1/400/300" alt="Proyecto 1">
+                         <div class="portfolio-overlay"><h4>Nombre Proyecto 1</h4><p>Diseño Gráfico</p></div>
+                    </a>
+                     <a href="portfolio.html" class="portfolio-item animate-on-scroll zoom-in" style="--delay: 0.1s;">
+                         <img src="https://picsum.photos/seed/project2/400/300" alt="Proyecto 2">
+                          <div class="portfolio-overlay"><h4>Nombre Proyecto 2</h4><p>Desarrollo Web (Shopify)</p></div>
+                     </a>
+                     <a href="portfolio.html" class="portfolio-item animate-on-scroll zoom-in" style="--delay: 0.2s;">
+                         <img src="https://picsum.photos/seed/project3/400/300" alt="Proyecto 3">
+                          <div class="portfolio-overlay"><h4>Nombre Proyecto 3</h4><p>Desarrollo Web (WordPress)</p></div>
+                     </a>
+                 </div>
+                 <div class="text-center animate-on-scroll fade-in-up" style="margin-top: 40px;">
+                    <a href="portfolio.html" class="btn btn-secondary">Ver Portafolio Completo</a>
+                 </div>
+            </div>
+        </section>
 
-        <section id="contact" class="contact-section">
+        <section id="contact" class="contact-section-preview">
             <div class="container">
-                <h2 class="section-title animate-on-scroll fade-in">Contacto</h2>
-                <p class="animate-on-scroll fade-in" style="text-align: center; margin-bottom: 40px;">¿Listo para crear algo increíble? ¡Hablemos!</p>
-
-                <form id="contact-form" class="contact-form animate-on-scroll fade-in-up"
-                      action="https://formspree.io/f/TU_ENDPOINT_FORMSPREE_AQUI"
-                      method="POST">
-
-                     <div class="form-group">
-                         <label for="name">Nombre:</label>
-                         <input type="text" id="name" name="name" required>
-                     </div>
-                     <div class="form-group">
-                         <label for="email">Email:</label>
-                         <input type="email" id="email" name="email" required>
-                     </div>
-                      <div class="form-group">
-                         <label for="subject">Asunto:</label>
-                         <input type="text" id="subject" name="_subject"> </div>
-                     <div class="form-group">
-                         <label for="message">Mensaje:</label>
-                         <textarea id="message" name="message" rows="5" required></textarea>
-                     </div>
-                     <input type="hidden" name="_replyto" value="email"> <div class="text-center">
-                        <button type="submit" class="btn btn-primary" id="submit-button">Enviar Mensaje</button>
-                     </div>
-                      <p id="form-status" style="margin-top: 15px; text-align: center; font-weight: bold;"></p> </form>
+                <h2 class="section-title animate-on-scroll fade-in">¿Empezamos?</h2>
+                 <p class="animate-on-scroll fade-in" style="text-align: center; margin-bottom: 30px;">Envíame un mensaje rápido o visita la página de contacto.</p>
+                 <div class="text-center animate-on-scroll fade-in-up">
+                     <a href="contact.html" class="btn btn-primary">Contactar Ahora</a>
+                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-         </footer>
+         <div class="container">
+            <p>&copy; <span id="year"></span> Tu Nombre. Todos los derechos reservados.</p>
+            </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

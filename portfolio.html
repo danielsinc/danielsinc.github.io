@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Tu Nombre</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Tu Nombre</a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#services">Servicios</a></li>
+                    <li><a href="index.html#plans">Planes</a></li>
+                    <li><a href="portfolio.html" class="active">Portafolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+             <button class="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav">
+                 <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#services">Servicios</a></li>
+                    <li><a href="index.html#plans">Planes</a></li>
+                    <li><a href="portfolio.html">Portafolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+         <section class="page-title-section alternate-bg">
+            <div class="container">
+                <h1 class="animate-on-scroll fade-in">Mi Portafolio</h1>
+                <p class="animate-on-scroll fade-in-up" style="--delay: 0.1s;">Una selección de mis trabajos recientes en diseño y desarrollo.</p>
+            </div>
+        </section>
+
+         <section class="portfolio-gallery-section">
+            <div class="container">
+                 <div class="portfolio-grid">
+                    <div class="portfolio-item animate-on-scroll zoom-in" data-category="grafico">
+                         <img src="https://picsum.photos/seed/project1/600/450" alt="Proyecto 1">
+                         <div class="portfolio-overlay"><h4>Nombre Proyecto 1</h4><p>Diseño Gráfico</p></div>
+                    </div>
+                    <div class="portfolio-item animate-on-scroll zoom-in" data-category="web" style="--delay: 0.1s;">
+                         <img src="https://picsum.photos/seed/project2/600/450" alt="Proyecto 2">
+                          <div class="portfolio-overlay"><h4>Tienda Online XYZ</h4><p>Desarrollo Web (Shopify)</p></div>
+                     </div>
+                    <div class="portfolio-item animate-on-scroll zoom-in" data-category="web" style="--delay: 0.2s;">
+                         <img src="https://picsum.photos/seed/project3/600/450" alt="Proyecto 3">
+                          <div class="portfolio-overlay"><h4>Sitio Web Corporativo</h4><p>Desarrollo Web (WordPress)</p></div>
+                     </div>
+                     <div class="portfolio-item animate-on-scroll zoom-in" data-category="branding" style="--delay: 0.0s;">
+                         <img src="https://picsum.photos/seed/project4/600/450" alt="Proyecto 4">
+                         <div class="portfolio-overlay"><h4>Identidad Visual - Marca A</h4><p>Branding</p></div>
+                    </div>
+                    <div class="portfolio-item animate-on-scroll zoom-in" data-category="grafico" style="--delay: 0.1s;">
+                         <img src="https://picsum.photos/seed/project5/600/450" alt="Proyecto 5">
+                          <div class="portfolio-overlay"><h4>Ilustraciones Personalizadas</h4><p>Diseño Gráfico</p></div>
+                     </div>
+                    <div class="portfolio-item animate-on-scroll zoom-in" data-category="web" style="--delay: 0.2s;">
+                         <img src="https://picsum.photos/seed/project6/600/450" alt="Proyecto 6">
+                          <div class="portfolio-overlay"><h4>Landing Page Evento</h4><p>Desarrollo Web</p></div>
+                     </div>
+                     </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Tu Nombre. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+     <script src="js/script.js"></script>
+</body>
+</html>
