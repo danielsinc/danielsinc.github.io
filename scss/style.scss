@@ -1,0 +1,24 @@
+// scss/style.scss
+
+// 1. Variables y Configuraciones
+@import 'partials/variables';
+
+// 2. Base y Reset
+@import 'partials/base';
+
+// 3. Componentes y Secciones
+@import 'partials/buttons';
+@import 'partials/header'; // Incluirá estilos de menú hamburguesa
+@import 'partials/hero';
+@import 'partials/services';
+@import 'partials/plans'; // Nuevos estilos de planes
+@import 'partials/portfolio';
+@import 'partials/contact';
+@import 'partials/blog'; // Nuevos estilos de blog
+@import 'partials/footer';
+
+// 4. Animaciones
+@import 'partials/animations';
+
+// 5. Responsividad (Media Queries) - Debe ir al final
+@import 'partials/responsive';

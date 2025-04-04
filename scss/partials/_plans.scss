@@ -1,0 +1,126 @@
+// scss/partials/_plans.scss
+.plans-section {
+    padding: 60px 0;
+    background-color: $light-color; // Fondo ligeramente diferente
+
+    &:nth-child(odd) { // Alternar color de fondo si quieres
+         background-color: $white;
+    }
+}
+
+.plans-grid {
+    display: grid;
+    // Intenta 4 columnas, si no caben, 3, si no, 2, si no, 1
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.plan-card {
+    background-color: $white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; // Alinea contenido verticalmente
+
+     &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    // Plan Destacado (opcional)
+    &.featured {
+        border-top: 5px solid $primary-color;
+        position: relative;
+        overflow: hidden; // Para el badge
+
+        &::before { // Badge "Popular"
+            content: "Popular";
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background-color: $primary-color;
+            color: $white;
+            padding: 5px 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+    }
+
+
+    .plan-icon { // Si quieres añadir un icono
+        font-size: 2.5rem; // Tamaño del icono (ej. usando FontAwesome)
+        color: $primary-color;
+        margin-bottom: 15px;
+    }
+
+    .plan-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: $dark-color;
+    }
+
+    .plan-description {
+        font-size: 0.9rem;
+        color: $secondary-color;
+        margin-bottom: 20px;
+        min-height: 40px; // Para alinear tarjetas
+    }
+
+    .plan-features {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+        text-align: left; // Características alineadas a la izquierda
+        font-size: 0.95rem;
+        flex-grow: 1; // Hace que esta sección crezca para empujar el precio/botón abajo
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 25px; // Espacio para el ícono check
+            position: relative;
+
+            &::before { // Ícono check (ej. unicode o FontAwesome)
+                content: '✔'; // Puedes usar FontAwesome: \f00c
+                // font-family: 'Font Awesome 5 Free'; // Si usas FontAwesome
+                // font-weight: 900; // Necesario para sólidos de FA
+                color: $success-color;
+                position: absolute;
+                left: 0;
+                top: 2px;
+            }
+        }
+         li.feature-disabled { // Para características no incluidas
+             color: $secondary-color;
+             text-decoration: line-through;
+             &::before {
+                 content: '✖'; // O \f00d para FontAwesome
+                 color: $secondary-color;
+             }
+         }
+    }
+
+    .plan-price {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $primary-color;
+        margin-bottom: 25px;
+
+        span { // Para texto como "/mes"
+            font-size: 0.9rem;
+            font-weight: normal;
+            color: $secondary-color;
+        }
+    }
+
+    .btn { // Asegura que el botón esté al final
+        margin-top: auto; // Empuja el botón al fondo si es necesario
+    }
+}

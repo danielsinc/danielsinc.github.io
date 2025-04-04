@@ -1,0 +1,31 @@
+// scss/partials/_variables.scss
+$primary-color: #0d6efd; // Bootstrap blue (ejemplo)
+$secondary-color: #6c757d; // Bootstrap gray
+$success-color: #198754; // Bootstrap green
+$warning-color: #ffc107; // Bootstrap yellow
+$light-color: #f8f9fa;
+$dark-color: #212529;
+$text-color: #333;
+$white: #fff;
+
+$body-font: 'Poppins', sans-serif;
+$heading-font: 'Poppins', sans-serif;
+
+$header-height: 70px;
+$header-height-mobile: 60px; // Altura diferente para móvil si es necesario
+
+$container-max-width: 1140px;
+$breakpoint-lg: 992px; // Breakpoint para menú hamburguesa
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+
+// --- Mixin para Media Queries (ejemplo) ---
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  } @else if $point == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $point == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  }
+}

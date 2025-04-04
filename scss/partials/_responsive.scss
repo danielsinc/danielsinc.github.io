@@ -1,0 +1,75 @@
+// scss/partials/_responsive.scss
+
+// Importa el mixin si está en _variables.scss o defínelo aquí
+// @import 'variables'; si $breakpoint-lg no está definido
+
+// --- Ajustes para Tablets y Móviles ---
+@include breakpoint(lg) { // Menos de 992px
+
+    body {
+       // padding-top: $header-height-mobile; // Ajustar si la altura del header cambia
+    }
+
+     #main-header {
+         // height: $header-height-mobile; // Ajustar si es necesario
+         // Los estilos del menú hamburguesa ya están en _header.scss con este breakpoint
+     }
+
+    // Ajustar padding general de secciones si es necesario
+    section {
+        padding: 40px 0;
+    }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+
+     .container {
+         padding: 0 15px; // Menos padding lateral
+     }
+
+     // Hero
+     .hero-section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+     .hero-content h1 {
+         font-size: 2.4rem;
+     }
+      .hero-content p {
+         font-size: 1.1rem;
+     }
+
+    // Otros ajustes si son necesarios (ej. grids de servicios/portfolio)
+    // .services-grid, .portfolio-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    // .plans-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+}
+
+@include breakpoint(md) { // Menos de 768px
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+
+    // Forzar una columna en grids si es necesario
+     .services-grid, .portfolio-grid, .plans-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .contact-form {
+         padding: 25px;
+     }
+}
+
+@include breakpoint(sm) { // Menos de 576px
+    h1 { font-size: 1.8rem; }
+     .hero-content h1 {
+         font-size: 2rem;
+     }
+     .hero-content p {
+         font-size: 1rem;
+     }
+     .btn {
+         padding: 10px 20px;
+         font-size: 0.9rem;
+     }
+     // Ajustes más finos para móviles pequeños
+}

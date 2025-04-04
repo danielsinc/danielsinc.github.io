@@ -1,0 +1,158 @@
+// scss/partials/_header.scss
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height;
+    background-color: $white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.4s ease-in-out, background-color 0.3s ease;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .logo a {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $dark-color;
+        text-decoration: none;
+    }
+
+    // Navegación Desktop
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-left: 30px;
+
+                a {
+                    color: $text-color;
+                    font-weight: 400;
+                    padding: 5px 0;
+                    position: relative;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: $primary-color;
+                        transition: width 0.3s ease;
+                    }
+
+                    &:hover,
+                    &.active { // Clase active opcional via JS
+                        color: $primary-color;
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+         // Ocultar nav desktop en móvil
+         @include breakpoint(lg) {
+            display: none;
+        }
+    }
+
+    // Botón Hamburguesa (solo visible en móvil)
+    .hamburger-btn {
+        display: none; // Oculto por defecto
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1010; // Por encima del menú
+
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: $dark-color;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        @include breakpoint(lg) {
+            display: block; // Mostrar en móvil
+        }
+    }
+
+     // Estilo del botón hamburguesa cuando el menú está activo (la 'X')
+     &.nav-active .hamburger-btn {
+        span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    }
+
+    // Menú Móvil (overlay)
+    .mobile-nav {
+        display: none; // Oculto por defecto
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($dark-color, 0.95); // Fondo oscuro semitransparente
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999; // Debajo del botón hamburguesa pero encima del resto
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+            li {
+                margin: 20px 0;
+
+                a {
+                    color: $white;
+                    font-size: 1.8rem; // Letras grandes
+                    text-decoration: none;
+                    font-weight: 600;
+                     &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    // Mostrar menú móvil cuando el header tiene la clase 'nav-active'
+    &.nav-active .mobile-nav {
+       display: flex;
+    }
+
+
+    // Estilo para ocultar header al scrollear
+    &.hidden {
+        top: -($header-height + 20px); // Oculta completamente
+         @include breakpoint(lg) {
+             top: -($header-height-mobile + 20px);
+         }
+    }
+}
